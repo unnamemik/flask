@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block slider %}
+{% endblock %}
+
+{% block sidemenu %}
+{% endblock %}
+
+{% block content %}
+<div class="about">
+ <div class="container">
+  <div class="singel_right">
+			     <div class="col-md-8">
+				      <div class="contact-form">
+				  	        <form method="post" action="404.html">
+					    	    <p class="comment-form-author"><label for="author">Your Name:</label>
+					    	    	<input type="text" class="textbox" value="Enter your name here..." onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Enter your name here...';}">
+						    	</p>
+						        <p class="comment-form-author"><label for="author">Email:</label>
+						     	   <input type="text" class="textbox" value="Enter your email here..." onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Email';}">
+						        </p>
+						        <p class="comment-form-author"><label for="author">Message:</label>
+						    	  <textarea value="Enter your message here..." onfocus="this.value = '';" onblur="if (this.value === '') {this.value = 'Message';}">Enter your message here...</textarea>
+						        </p>
+						        <input name="submit" type="submit" id="submit" value="Submit">
+					        </form>
+				       </div>
+			     </div>
+			     <div class="col-md-4 contact_right">
+					<h3>Address</h3>
+				    <div class="address">
+						<i class="pin_icon"></i>
+					    <div class="contact_address">
+						  Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non
+					    </div>
+					    <div class="clearfix"></div>
+					</div>
+					<div class="address">
+						<i class="phone"></i>
+					    <div class="contact_address">
+						   1-25-2568-897
+					    </div>
+					    <div class="clearfix"></div>
+					</div>
+					<div class="address">
+						<i class="mail"></i>
+					    <div class="contact_email">
+						  <a href="malito:mail@demolink.org">mail(at)fashionpress.com</a>
+					    </div>
+					    <div class="clearfix"></div>
+					</div>
+		        </div>
+		        <div class="clearfix"></div>
+		</div>
+		<div class="map">
+           <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44698.37794712888!2d61.46541587766999!3d55.10814418231473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c592cb104a3a8d%3A0xef224a2a6d1711bf!2z0KfQtdC70Y_QsdC40L3RgdC6LCDQp9C10LvRj9Cx0LjQvdGB0LrQsNGPINC-0LHQuy4!5e0!3m2!1sru!2sru!4v1693344355509!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"> </iframe>
+        </div>
+     </div>
+</div>
+{% endblock %}
