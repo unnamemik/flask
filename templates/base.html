@@ -2,7 +2,11 @@
 <html>
 
 <head>
-<title>Fashionpress an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Home :: w3layouts</title>
+<title>
+{% block title %}
+    Fashionpress an E-Commerce online Shopping Category Flat Bootstarp responsive Website Template| Home :: w3layouts
+{% endblock %}
+</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Fashionpress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
@@ -66,10 +70,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="header_top">
 		<div class="container">
 			<div class="logo">
-				<a href="index.html"><img src="/static/images/logo.png" alt=""/></a>
+				<a href="{{ url_for('index') }}"><img src="/static/images/logo.png" alt=""/></a>
 			</div>
             <ul class="shopping_grid">
-			      <li><a href="login.html">Sign In</a></li>
+			      <li><a href="{{ url_for('registration') }}">Registration</a></li>
+			</ul>
+            <div></div>
+            <ul class="shopping_grid">
+			      <li><a style="color: #e2393e" href="{{ url_for('login') }}">Sign In</a></li>
 			</ul>
 		    <div class="clearfix"> </div>
 		</div>
@@ -78,13 +86,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 				<a class="toggleMenu" href="#">Menu</a>
 				<ul class="nav">
-					<li class="active"><a href="index.html" data-hover="Home">Home</a></li>
-					<li><a href="about.html" data-hover="About Us">About Us</a></li>
-					<li><a href="careers.html" data-hover="Careers">Careers</a></li>
-					<li><a href="contact.html" data-hover="Contact Us">Contact Us</a></li>
-					<li><a href="404.html" data-hover="Company Profile">Company Profile</a></li>
-					<li><a href="register.html" data-hover="Company Registration">Company Registration</a></li>
-					<li><a href="wishlist.html" data-hover="Wish List">Wish List</a></li>
+					<li class="active"><a href="{{ url_for('index') }} "data-hover="Home">Home</a></li>
+					<li><a href="{{ url_for('about') }}" data-hover="About Us">About Us</a></li>
+					<li><a href="{{ url_for('careers') }}" data-hover="Careers">Careers</a></li>
+					<li><a href="{{ url_for('contact') }}" data-hover="Contact Us">Contact Us</a></li>
+					<li><a href="{{ url_for('profile') }}" data-hover="Company Profile">Profile</a></li>
+					<li><a href="{{ url_for('register') }}" data-hover="Company Registration">Company</a></li>
+					<li><a href="{{ url_for('wishlist') }}" data-hover="Wish List">Wish List</a></li>
 				 </ul>
 				 <script type="text/javascript" src="/static/js/nav.js"></script>
 	      </div><!-- end h_menu4 -->
@@ -146,9 +154,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			  <ul class="menu">
 				<li class="item1"><a href="#"><img class="arrow-img" src="/static/images/f_menu.png" alt=""/>Одежда и обувь</a>
 					<ul class="cute">
-						<li class="subitem1"><a href="jackets.html">Куртки </a></li>
-						<li class="subitem2"><a href="shoes.html">Обувь </a></li>
-						<li class="subitem3"><a href="clothes.html">Одежда </a></li>
+						<li class="subitem1"><a href="{{ url_for('jackets') }}">Куртки </a></li>
+						<li class="subitem2"><a href="{{ url_for('shoes') }}">Обувь </a></li>
+						<li class="subitem3"><a href="{{ url_for('clothes') }}">Одежда </a></li>
 					</ul>
 				</li>
 			</ul>

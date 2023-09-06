@@ -1658,7 +1658,7 @@ div.register-bottom-grid {
 	display: block;
 	text-transform: uppercase;
 }
-.login-right input[type="text"] {
+.login-right {
 	border: 1px solid #DDDBDB;
 	outline-color:#fb4d01;
 	width: 96%;

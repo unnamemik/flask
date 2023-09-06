@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Registration
+{% endblock %}
+
+{% block slider %}
+{% endblock %}
+
+{% block sidemenu %}
+{% endblock %}
+
+{% block search %}
+{% endblock %}
+
+{% block content %}
+<div class="about">
+  <div class="container">
+         <div class="register">
+			   <div class="col-md-6 login-left">
+                   <h3>JOIN OUR TEAM!</h3>
+			   </div>
+			   <div class="col-md-6 login-right">
+			  	<h3>REGISTER NOW.</h3>
+				<p>If you have an account with us, please log in.</p>
+                    <form action="/registration" method="POST">
+                        {{ form.csrf_token }}
+
+                            {% if alert_message == "Пользователь уже существует!" %}
+                                <div class="alert alert-danger">
+                                        <p>{{ alert_message }}</p>
+                                </div>
+                            {% elif alert_message == "Добро пожаловать!" %}
+                                <div class="alert alert-success">
+                                        <p>{{ alert_message }}</p>
+                                </div>
+                            {% endif %}
+
+                        {% for field in form if field.name != 'csrf_token' %}
+                        <p>
+                          <div>
+                            <span>{{ field.label }}<label>*</label></span><br>
+                                {{ field(size=32) }}
+                          </div>
+                            {% if field.errors %}
+                                <ul class="alert alert-danger">
+                                    {% for error in field.errors %}
+                                        <li>{{ error }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                         {% endfor %}
+                      <input type="submit" value="Register">
+                    </form>
+               </div>
+			   <div class="clearfix"> </div>
+		</div>
+	</div>
+</div>
+{% endblock %}
